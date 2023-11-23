@@ -21,6 +21,9 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+a:hover {
+  color: var(--grayColor);
+}
 .btn-link {
   color: var(--whiteColor);
   text-transform: uppercase;
@@ -36,7 +39,6 @@ a {
   background: rgb(104, 154, 248, 0.102);
 }
 section {
-  margin-top: 30px;
   margin-bottom: 100px;
 }
 ul {

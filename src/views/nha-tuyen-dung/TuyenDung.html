@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <title>Document</title>
+    <title>Tuyển dụng</title>
   </head>
   <body>
     <header>
@@ -21,12 +21,12 @@
         <div class="header-content__main">
           <div class="header-content__title">
             <nav class="navigation">
-              <a href="#!" class="logo">Jobs For Student</a>
+              <a onclick="onClickHomePage()" class="logo">Jobs For Student</a>
             </nav>
           </div>
           <div id="menu">
             <ul>
-              <li><a href="#">Trang chủ</a></li>
+              <li><a onclick="onClickHomePage()">Trang chủ</a></li>
               <li>
                 <a href="#">Việc làm</a>
                 <ul class="sub-menu">
@@ -79,22 +79,30 @@
           <section class="main">
             <div class="banner-content">
               <div class="banner-content__title">
-                <h3>Tuyển dụng Nhân tài tại Việt Nam cùng JobsForStudent</h3>
-                <div class="banner-des">
+                <h3 data-aos="zoom-in-down">
+                  Tuyển dụng Nhân tài tại Việt Nam cùng JobsForStudent
+                </h3>
+                <div class="banner-des" data-aos="zoom-in-down">
                   <span
                     >Với hiểu biết sâu sắc về rất nhiều lĩnh vực và các kỹ năng
                     chuyên môn, chúng tôi có thể giúp bạn tiếp cận và tuyển dụng
                     những ứng viên có năng lực tốt nhất.</span
                   >
                 </div>
-                <div class="banner-btn bg-white flex rounded">
-                  <button class="text-xl flex justify-center items-center">
+                <div
+                  class="banner-btn bg-white flex rounded"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
+                  <button
+                    class="btn-contact text-xl flex justify-center items-center"
+                  >
                     <span class="search-btn__text text-white">
                       Liên hệ ngay</span
                     >
                   </button>
                 </div>
-                <div class="banner-signin">
+                <div class="banner-signin" data-aos="fade-up">
                   <span style="color: var(--grayColor)"
                     >Đã có tài khoản khách hàng?
                     <a style="text-decoration: underline" href=""
@@ -103,7 +111,7 @@
                   >
                 </div>
               </div>
-              <div class="banner-content__img">
+              <div class="banner-content__img" data-aos="fade-left">
                 <img
                   src="https://itviec.com/assets/employer_landing/hire-the-best-it-15-95d4b6df6293a405cd77c094b8c7eb5dcc99cf8711f5b47751c841cfa51023a0.png"
                   alt=""
@@ -114,50 +122,300 @@
         </div>
         <div class="intro">
           <section class="main">
-            <div class="intro-title">
-              <h3>Điều gì tạo nên sự khác biệt ở JobsForStudent</h3>
-            </div>
-            <div class="intro-des">
-              <span>
-                JobsForStudent là trang tuyển dụng và cơ sở dữ liệu hàng đầu về
-                các công việc tốt nhất tại Việt Nam
-              </span>
-            </div>
-            <div class="intro-data">
-              <div class="intro-data__box">
-                <div class="intro_data__box__img">
-                  <img
-                    src="https://itviec.com/assets/employer_landing/first-hand-8f9978db44dfb1095793ff239fa072e94bfd1d74d7b62a875d7f69eba997b911.svg"
-                    alt=""
-                  />
-                </div>
-                <div class="intro_data__box__title">
-                  <p class="large-number number-data">10,000+</p>
-                  <p class="text-black">Công ty và Doanh Nghiệp</p>
+            <div class="intro-content">
+              <div class="intro-title" data-aos="fade-right">
+                <h3>Điều gì tạo nên sự khác biệt ở JobsForStudent</h3>
+                <div class="intro-des">
+                  <span style="color: var(--blackColor)">
+                    JobsForStudent là trang tuyển dụng và cơ sở dữ liệu hàng đầu
+                    về các công việc tốt nhất tại Việt Nam
+                  </span>
                 </div>
               </div>
-              <div class="intro-data__box">
-                <div class="intro_data__box__img">
-                  <img
-                    src="https://itviec.com/assets/employer_landing/second-hand-ef88cbd609f610ad98826b198a83feb349b8896a396f114c31721640592f6698.svg"
-                    alt=""
-                  />
+
+              <div class="intro-data" data-aos="zoom-in-up">
+                <div class="intro-data__box">
+                  <div class="intro-data__box--img">
+                    <img
+                      src="https://itviec.com/assets/employer_landing/first-hand-8f9978db44dfb1095793ff239fa072e94bfd1d74d7b62a875d7f69eba997b911.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="intro_data__box--title">
+                    <p class="large-number number-data"></p>
+                    <p class="text-black">Công ty và Doanh Nghiệp</p>
+                  </div>
                 </div>
-                <div class="intro_data__box__title">
-                  <p class="large-number number-data">1,500,000+</p>
-                  <p class="text-black">Hồ sơ đã gửi đến Nhà tuyển dụng</p>
+                <div class="intro-data__box">
+                  <div class="intro-data__box--img">
+                    <img
+                      src="https://itviec.com/assets/employer_landing/second-hand-ef88cbd609f610ad98826b198a83feb349b8896a396f114c31721640592f6698.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="intro_data__box--title">
+                    <p class="large-number number-data number-hoso"></p>
+                    <p class="text-black">Hồ sơ đã gửi đến Nhà tuyển dụng</p>
+                  </div>
+                </div>
+                <div class="intro-data__box">
+                  <div class="intro-data__box--img">
+                    <img
+                      src="https://itviec.com/assets/employer_landing/third-hand-4285467762b4dd431d96729f58e05928f8b304f711ce0d683660648ebd294f36.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="intro_data__box--title">
+                    <p class="large-number number-data number-ungvien"></p>
+                    <p class="text-black">Hồ sơ Ứng viên kinh nghiệm cao</p>
+                  </div>
                 </div>
               </div>
-              <div class="intro-data__box">
-                <div class="intro_data__box__img">
+            </div>
+          </section>
+        </div>
+        <div class="service">
+          <section class="main">
+            <div class="service-content">
+              <div class="service-content__title" data-aos="fade-left">
+                <h4>Dịch vụ chất lượng cao dành cho Nhà tuyển dụng</h4>
+              </div>
+              <div class="service-content__box" data-aos="zoom-in-down">
+                <div class="service-box">
+                  <div class="service-box__content">
+                    <div
+                      class="service-box__content--title"
+                      data-aos="zoom-in-down"
+                      data-aos-delay="300"
+                    >
+                      <h4>Đăng tin tuyển dụng</h4>
+                    </div>
+                    <div
+                      class="service-box__content--des"
+                      data-aos="zoom-in-down"
+                      data-aos-delay="300"
+                    >
+                      <span
+                        >Đăng tuyển vị trí công việc, dễ dàng quản lý hồ sơ ứng
+                        viên với giao diện trực quan, đội ngũ hỗ trợ, và công cụ
+                        mạng mẽ từ JobsForStudent</span
+                      >
+                    </div>
+                    <div
+                      class="service-box__content--footer"
+                      data-aos="zoom-in-right"
+                      data-aos-delay="300"
+                    >
+                      <div class="service-box__content--box">
+                        <div class="service-box__content--box--img">
+                          <img
+                            src="https://itviec.com/assets/employer_landing/opportunities-a53edbeb973cfeaa459e920b7a4562354aa02a1c83a53150cf8ebf17aaa7ce57.svg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="service-box__content--box--text">
+                          Gia tăng cơ hội để tiếp cận ứng viên chất lượng từ
+                          JobsForStudent
+                        </div>
+                      </div>
+                      <div class="service-box__content--box">
+                        <div class="service-box__content--box--img">
+                          <img
+                            src="https://itviec.com/assets/employer_landing/right-skill-be1892ff9d11b80aeab90527abe6b19cfb855ab95fbcc9b7bc75c89184353bfd.svg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="service-box__content--box--text">
+                          Thu hút ứng viên phù hợp với yêu cầu về kỹ năng nhiều
+                          chuyên ngành nghề
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-box__img">
+                    <img
+                      src="https://itviec.com/assets/employer_landing/job-posting-15-30ceaa97f37fd97afb7dabc2c5ef6fe5702b78faf0c3da8aedb5d7d64b274a54.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="service-content">
+              <div class="service-content__box">
+                <div class="service-box">
+                  <div
+                    class="service-box__img2"
+                    data-aos="zoom-in"
+                    data-aos-delay="500"
+                  >
+                    <img
+                      src="https://itviec.com/assets/employer_landing/ai-match-15-22d68e502f2d153eec13bae292cf4207d3e90e22ff153b0a28cfcfd26592f75f.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="service-box__content">
+                    <div
+                      class="service-box__content--title"
+                      data-aos="fade-left"
+                    >
+                      <h4>Gợi ý ứng viên AI Match</h4>
+                    </div>
+                    <div class="service-box__content--des" data-aos="flip-down">
+                      <span
+                        >Kết nối với nguồn hồ sơ ứng viên đa dạng, hoạt động
+                        tích cực. Dễ dàng tiếp cận ứng viên với thao tác đơn
+                        giản. Mở khóa để giúp tìm kiếm ứng viên phù hợp</span
+                      >
+                    </div>
+                    <div class="service-box__content--footer2">
+                      <div
+                        class="service-box__content--box2"
+                        data-aos="fade-down-left"
+                        data-aos-delay="300"
+                      >
+                        <div class="service-box__content--box--img2">
+                          <img
+                            src="https://itviec.com/assets/employer_landing/second-candidate-1bdd90ad9c1093d58e8cf9cbe7a69d0cdc6c0abdc07836be960a2b2b6e4afe70.svg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="service-box__content--box--text">
+                          Các ứng viên phù hợp nhất được lựa chọn dựa trên kỹ
+                          năng, kinh nghiệm, nhu cầu công việc và hơn thế nữa
+                        </div>
+                      </div>
+                      <div
+                        class="service-box__content--box2"
+                        data-aos="fade-down-left"
+                        data-aos-delay="300"
+                      >
+                        <div class="service-box__content--box--img2">
+                          <img
+                            src="https://itviec.com/assets/employer_landing/first-candidate-429956d360c41ee733ef01951e18c86d80a1614aa14777d4f80937a7c629fc2c.svg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="service-box__content--box--text">
+                          Chỉ kết nối nhà tuyển dụng với những nhân tài đang có
+                          ý định chuyển việc
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="service-btn bg-white flex rounded"
+                          data-aos="flip-left"
+                          data-aos-delay="300"
+                        >
+                          <button
+                            class="text-xl flex justify-center items-center"
+                          >
+                            <span class="service-btn__text text-white">
+                              Xem thêm về AI Match</span
+                            >
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="service-footer">
+            <span
+              >Đăng tuyển ngay hôm ngay để trải nghiệm dịch vụ tốt nhất của
+              JobsForStudent</span
+            >
+            <button class="banner-btn rounded">Đăng tuyển ngay</button>
+          </div>
+        </div>
+        <div class="business">
+          <section class="main">
+            <div class="business-content">
+              <div
+                class="business-content__title"
+                data-aos="zoom-in-right"
+                data-aos-delay="400"
+              >
+                <h4>Các doanh nghiệp hàng đầu lự chọn FobsForStudent</h4>
+              </div>
+              <div
+                class="business-content__main"
+                data-aos="zoom-out"
+                data-aos-delay="500"
+              >
+                <div class="logo">
                   <img
-                    src="https://itviec.com/assets/employer_landing/third-hand-4285467762b4dd431d96729f58e05928f8b304f711ce0d683660648ebd294f36.svg"
+                    class="employer-logo bg-white re-logo"
+                    src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmZvSXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--88c82102b4c6782414b90e4077f75449b9789560/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/Logo%20MB%20he%20mau%20RGB%2001.png"
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    class="employer-logo bg-white re-logo"
+                    src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOEJwSFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--10a9cdf11d126baa55d2186b1dd97bc867eb9a9e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/logo%20FSOFT%20d%E1%BB%8Dc.png"
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    class="w-100 h-100 employer-logo bg-white re-logo"
+                    src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM0E3SHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3873048b5c25240e612222d38b001c927993024c/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/MoMo%20Logo.png"
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    class="w-100 h-100 employer-logo bg-white"
+                    src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN09SR3c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8116cf4b23cb755b3b556d410e98ed210b2f68c4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/logo%20Viettel.JPG"
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    class="w-100 h-100 employer-logo bg-white"
+                    src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNWpjRlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6c522fb1d6bbcea4ecc14fa1b08837bde132d324/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/avatar-10-10.jpg"
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/2.svg"
                     alt=""
                   />
                 </div>
-                <div class="intro_data__box__title">
-                  <p class="large-number number-data">300,000+</p>
-                  <p class="text-black">Hồ sơ Ứng viên kinh nghiệm cao</p>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/7.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/6.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/9.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/8.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/bosch_global.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="logo">
+                  <img
+                    src="https://employer.vietnamworks.com/v2/img/partner/1.svg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -250,4 +508,54 @@
       </footer>
     </div>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+    const onClickHomePage = () => {
+      window.location.assign("../layout-main/LayoutMain.html");
+    };
+
+    function animateNumber(
+      finalNumber,
+      duration = 5000,
+      startNumber = 0,
+      callback
+    ) {
+      let currentNumber = startNumber;
+      const interval = window.setInterval(updateNumber, 17);
+      function updateNumber() {
+        if (currentNumber >= finalNumber) {
+          clearInterval(interval);
+        } else {
+          let inc = Math.ceil(finalNumber / (duration / 17));
+          if (currentNumber + inc > finalNumber) {
+            currentNumber = finalNumber;
+            clearInterval(interval);
+          } else {
+            currentNumber += inc;
+          }
+          callback(currentNumber);
+        }
+      }
+    }
+    animateNumber(10000, 2000, 0, function (number) {
+      const formattedNumber = number.toLocaleString();
+      document.getElementsByClassName("number-data")[0].innerText =
+        formattedNumber + "+";
+    });
+    animateNumber(1500000, 2000, 0, function (number) {
+      const formattedNumber = number.toLocaleString();
+      document.getElementsByClassName("number-hoso")[0].innerText =
+        formattedNumber + "+";
+    });
+    animateNumber(10000, 2000, 0, function (number) {
+      const formattedNumber = number.toLocaleString();
+      document.getElementsByClassName("number-ungvien")[0].innerText =
+        formattedNumber + "+";
+    });
+
+    const listLogoBusiness = [];
+  </script>
 </html>
