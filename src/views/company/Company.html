@@ -49,15 +49,15 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="#"> Công ty</a></li>
+              <li><a> Công ty</a></li>
               <li><a href="#"> Nghề nghiệp</a></li>
-              <li><a href="#"> Liên hệ</a></li>
+              <li><a onclick="onClickBlog()">Blog</a></li>
             </ul>
           </div>
           <div class="header-content__right">
             <div class="flex" style="position: relative">
               <div style="padding-right: 10px">
-                <a>Nhà tuyển dụng</a>
+                <a onclick="onClickNhaTuyenDung()">Nhà tuyển dụng</a>
               </div>
               <div class="divider-horizontal"></div>
               <div class="pl-2">
@@ -112,7 +112,9 @@
                     padding-top: 40px;
                   "
                 >
-                  <button class="btn-main">Xem thêm</button>
+                  <button class="btn-main" onclick="onClickMoreBtn()">
+                    Xem thêm
+                  </button>
                 </div>
               </div>
             </section>
@@ -212,76 +214,163 @@
     });
     const listBusiness = [
       {
-        bg: "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2FVPBANK%2Fvi%2Fnoi_lam_viec_hanh_phuc_nhat_2019_-2-02_1_.jpg&w=1920&q=75",
         logo: "https://employer.vietnamworks.com/v2/img/partner/8.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
+        nameCompany: "Ngân Hàng TMCP Việt Nam Thịnh Vượng - VP Bank",
+        chuyenNganh: "Ngân hàng",
         viecLam: "7",
       },
       {
-        bg: "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/8.svg",
-        nameCompany: "Công ty FPT",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FPGbank-cover2.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fvietnamworks%2Fvi%2FPG_Bank-Logo.png&w=1920&q=75",
+        nameCompany: "Ngân hàng thương mại cổ phần Thịnh vượng và Phát triển",
         chuyenNganh: "Hóa chất/ Hóa sinh",
+        viecLam: "80",
+      },
+      {
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2Fbanner_doji_11.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2FDOJI-Group%2Fvi%2Ficon_tuyen_dung-13.png&w=1920&q=75",
+        nameCompany: "Tập đoàn vàng bạc đá quý DOJI",
+        chuyenNganh: "Thời trang/ Trang sức",
+        viecLam: "10",
+      },
+      {
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FCover_An_Ph%C3%A1t-min-min.png&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FLogo-An-Phat.png&w=1920&q=75",
+        nameCompany: "CÔNG TY CỔ PHẦN TẬP ĐOÀN AN PHÁT HOLDINGS",
+        chuyenNganh: "Sản xuất",
         viecLam: "7",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FVNpay.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FLogo_VNPAY.jpg&w=1920&q=75",
+        nameCompany: "Công Ty CP Giải Pháp Thanh Toán Việt Nam (VNPAY)",
+        chuyenNganh: "Tài Chính",
+        viecLam: "19",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2F%E1%BA%A2nh_%C4%91%E1%BB%83_thay.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2FStringee-communicationapis%2Fvi%2FStringee_logo-03.png&w=1920&q=75",
+        nameCompany: "STRINGEE",
+        chuyenNganh: "Phần Mềm CNTT/ Dịch vụ Phần mềm",
+        viecLam: "1",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2F21.9_Ngan_hang_xanh_Cover_resized_1_.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2Flogo_xanh.jpg&w=1920&q=75",
+        nameCompany: "Ngân Hàng TMCP Đầu Tư & Phát Triển Việt Nam (BIDV)",
+        chuyenNganh: "Ngân hàng",
+        viecLam: "5",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fbanner-default-company.png&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages.vietnamworks.com%2Fpictureofcompany%2Fcd%2F10320301.png&w=1920&q=75",
+        nameCompany: "Tập Đoàn VinGroup - Công Ty CP",
+        chuyenNganh: "Kỹ thuật xây dựng/ Cơ sở hạ tầng",
+        viecLam: "20",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2Faaaaaa.png&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fmisa%2Fen%2FLogo-MISA_VN_Nen-trang.jpg&w=1920&q=75",
+        nameCompany: "Công ty cổ phần MISA",
+        chuyenNganh: "Phần Mềm CNTT/ Dịch vụ Phần mềm",
+        viecLam: "33",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FMicrosoftTeams-image_94_.png&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2Flogo_vu%C3%B4ng_ch%E1%BB%AF_xanh_kh%C3%B4ng_n%E1%BB%81n.png&w=1920&q=75",
+        nameCompany: "Shinhan Vietnam Finance Company Limited",
+        chuyenNganh: "Tài chính",
+        viecLam: "16",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2F1920x510-ACB_1_.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fvietnamworks%2Fen%2FACB-Logo.png&w=1920&q=75",
+        nameCompany: "Shinhan Vietnam Finance Company Limited",
+        chuyenNganh: "Tài chính",
+        viecLam: "33",
       },
       {
-        bg: "https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg?w=360",
-        logo: "https://employer.vietnamworks.com/v2/img/partner/10.svg",
-        nameCompany: "Công ty FPT",
-        chuyenNganh: "Hóa chất/ Hóa sinh",
-        viecLam: "7",
+        bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2F%E1%BA%A2nh_Cover.jpg&w=1920&q=75",
+        logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2FCODE88%2Fen%2Fcode88-black.png&w=1920&q=75",
+        nameCompany: "Shinhan Vietnam Finance Company Limited",
+        chuyenNganh: "Tài chính",
+        viecLam: "16",
       },
     ];
+
+    const onClickMoreBtn = () => {
+      listBusiness.push(
+        {
+          bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2FMicrosoftTeams-image_94_.png&w=1920&q=75",
+          logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2Flogo_vu%C3%B4ng_ch%E1%BB%AF_xanh_kh%C3%B4ng_n%E1%BB%81n.png&w=1920&q=75",
+          nameCompany: "Shinhan Vietnam Finance Company Limited",
+          chuyenNganh: "Tài chính",
+          viecLam: "16",
+        },
+        {
+          bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2F1920x510-ACB_1_.jpg&w=1920&q=75",
+          logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fvietnamworks%2Fen%2FACB-Logo.png&w=1920&q=75",
+          nameCompany: "Shinhan Vietnam Finance Company Limited",
+          chuyenNganh: "Tài chính",
+          viecLam: "33",
+        },
+        {
+          bg: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2Fnull%2Fen%2F%E1%BA%A2nh_Cover.jpg&w=1920&q=75",
+          logo: "https://www.vietnamworks.com/_next/image?url=https%3A%2F%2Fimages02.vietnamworks.com%2Fcompanyprofile%2FCODE88%2Fen%2Fcode88-black.png&w=1920&q=75",
+          nameCompany: "Shinhan Vietnam Finance Company Limited",
+          chuyenNganh: "Tài chính",
+          viecLam: "16",
+        }
+      );
+      const elBusinessTop = document.getElementsByClassName("content-main")[0];
+      elBusinessTop.innerHTML = listBusiness
+        .map(
+          (item) =>
+            `
+        <div class="business-top__content--box">
+   <div class="bg-top">
+      <img
+         src="${item.bg}"
+         alt=""
+         />
+   </div>
+   <div class="logo-box">
+      <img
+         src="${item.logo}"
+         alt=""
+         />
+   </div>
+   <div style="padding: 0 16px 30px 16px;margin-top:80px" class="company-info">
+      <div
+         style="
+         color: black;
+         display: flex;
+         flex-direction: column;
+         padding-top: 30px;
+         padding-bottom: 6px
+         class="content-company"
+         "
+         >
+         <span title="${item.nameCompany}">
+          
+          ${item.nameCompany}</span>
+         <span style="display: flex; align-items: center; gap:8px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0px;"><g clip-path="url(#clip0_533_6629)"><path d="M4.02887 4C3.19226 4 2.51464 4.67762 2.51464 5.51423V7.78557V9.29979H16.8998H20.6854V7.02845C20.6854 6.19184 20.0077 5.51423 19.1711 5.51423H9.47949L9.01221 4.73493C8.73889 4.27915 8.24613 4 7.71388 4H4.02887ZM2.13757 10.814C1.37364 10.814 0.82659 11.554 1.0507 12.2839L3.29837 19.5874C3.49447 20.2226 4.08131 20.6565 4.74606 20.6565H11.6H18.4539C19.1187 20.6565 19.7055 20.2226 19.9016 19.5874L22.1493 12.2839C22.3734 11.554 21.8264 10.814 21.0624 10.814H11.6H2.13757Z" fill="#888"></path></g><defs><clipPath id="clip0_533_6629"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg>
+          ${item.chuyenNganh}</span>
+         <span style="display: flex; align-items: center; gap:8px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.2 2.40002C10.316 2.40002 9.59998 3.11602 9.59998 4.00002H3.19998C2.31598 4.00002 1.59998 4.71602 1.59998 5.60002V12.8C1.59998 13.684 2.31598 14.4 3.19998 14.4H20.8C21.684 14.4 22.4 13.684 22.4 12.8V5.60002C22.4 4.71602 21.684 4.00002 20.8 4.00002H14.4C14.4 3.11602 13.684 2.40002 12.8 2.40002H11.2ZM12 11.2C12.4416 11.2 12.8 11.5584 12.8 12C12.8 12.4416 12.4416 12.8 12 12.8C11.5584 12.8 11.2 12.4416 11.2 12C11.2 11.5584 11.5584 11.2 12 11.2ZM1.59998 15.5547V18.4C1.59998 19.284 2.31598 20 3.19998 20H20.8C21.684 20 22.4 19.284 22.4 18.4V15.5547C21.9272 15.8299 21.3856 16 20.8 16H3.19998C2.61438 16 2.07278 15.8299 1.59998 15.5547Z" fill="#888"></path></svg>
+          ${item.viecLam} việc làm</span>
+      </div>
+      <div>
+         <button class="box-btn">Theo dõi</button>
+      </div>
+   </div>
+</div>
+    `
+        )
+        .join(" ");
+    };
 
     const elBusinessTop = document.getElementsByClassName("content-main")[0];
     elBusinessTop.innerHTML = listBusiness
@@ -301,7 +390,7 @@
          alt=""
          />
    </div>
-   <div style="padding: 0 16px 30px 16px;margin-top:80px">
+   <div style="padding: 0 16px 30px 16px;margin-top:80px" class="company-info">
       <div
          style="
          color: black;
@@ -310,10 +399,18 @@
          padding-top: 30px;
          padding-bottom: 6px
          "
+         class="content-company"
          >
-         <span>${item.nameCompany}</span>
-         <span>${item.chuyenNganh}</span>
-         <span>${item.viecLam} việc làm</span>
+         <span >330 theo dõi</span>
+         <span title="${item.nameCompany}">
+          
+          ${item.nameCompany}</span>
+         <span style="display: flex; align-items: center; gap:8px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0px;"><g clip-path="url(#clip0_533_6629)"><path d="M4.02887 4C3.19226 4 2.51464 4.67762 2.51464 5.51423V7.78557V9.29979H16.8998H20.6854V7.02845C20.6854 6.19184 20.0077 5.51423 19.1711 5.51423H9.47949L9.01221 4.73493C8.73889 4.27915 8.24613 4 7.71388 4H4.02887ZM2.13757 10.814C1.37364 10.814 0.82659 11.554 1.0507 12.2839L3.29837 19.5874C3.49447 20.2226 4.08131 20.6565 4.74606 20.6565H11.6H18.4539C19.1187 20.6565 19.7055 20.2226 19.9016 19.5874L22.1493 12.2839C22.3734 11.554 21.8264 10.814 21.0624 10.814H11.6H2.13757Z" fill="#888"></path></g><defs><clipPath id="clip0_533_6629"><rect width="24" height="24" fill="white"></rect></clipPath></defs></svg>
+          ${item.chuyenNganh}</span>
+         <span style="display: flex; align-items: center; gap:8px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.2 2.40002C10.316 2.40002 9.59998 3.11602 9.59998 4.00002H3.19998C2.31598 4.00002 1.59998 4.71602 1.59998 5.60002V12.8C1.59998 13.684 2.31598 14.4 3.19998 14.4H20.8C21.684 14.4 22.4 13.684 22.4 12.8V5.60002C22.4 4.71602 21.684 4.00002 20.8 4.00002H14.4C14.4 3.11602 13.684 2.40002 12.8 2.40002H11.2ZM12 11.2C12.4416 11.2 12.8 11.5584 12.8 12C12.8 12.4416 12.4416 12.8 12 12.8C11.5584 12.8 11.2 12.4416 11.2 12C11.2 11.5584 11.5584 11.2 12 11.2ZM1.59998 15.5547V18.4C1.59998 19.284 2.31598 20 3.19998 20H20.8C21.684 20 22.4 19.284 22.4 18.4V15.5547C21.9272 15.8299 21.3856 16 20.8 16H3.19998C2.61438 16 2.07278 15.8299 1.59998 15.5547Z" fill="#888"></path></svg>
+          ${item.viecLam} việc làm</span>
       </div>
       <div>
          <button class="box-btn">Theo dõi</button>
@@ -323,5 +420,15 @@
     `
       )
       .join(" ");
+
+    const onClickBlog = () => {
+      window.location.assign("../blog/Blog.html");
+    };
+    const onClickHomePage = () => {
+      window.location.assign("../layout-main/LayoutMain.html");
+    };
+    const onClickNhaTuyenDung = () => {
+      window.location.assign("../nha-tuyen-dung/TuyenDung.html");
+    };
   </script>
 </html>

@@ -195,7 +195,7 @@
   padding-top: 50px;
 }
 .business-content {
-  height: 800px;
+  height: 550px;
   text-align: center;
   padding-top: 100px;
 }
@@ -229,4 +229,116 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.feedback-content__title {
+  color: var(--blackColor);
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.feedback-content__box {
+  height: 330px;
+  overflow: hidden;
+}
+#snp-swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  height: 200px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  top: 90% !important;
+
+  border-radius: 100%;
+  width: 35px !important;
+  height: 35px !important;
+  border: 1px solid var(--grayColor);
+}
+.swiper-button-prev {
+  right: 53% !important;
+  left: auto !important;
+}
+.swiper-button-next {
+  left: 53% !important;
+  right: auto !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--blackColor) !important;
+  font-size: 20px !important;
+}
+.swiper-pagination {
+  bottom: 26px !important;
+  color: black;
+}
+.feedback section {
+  margin-bottom: 0;
+}
+.feedback-box__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px 0;
+  height: 250px;
+  overflow-y: auto;
+  padding: 20px;
+}
+.feedback-box__content span {
+  text-align: left;
+  color: var(--blackColor);
+}
+
+.feedback-box__content span:first-child {
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  font-weight: 500;
+}
+.feedback-box__content span:nth-child(3) {
+  color: rgb(255, 125, 85);
+}
+.feedback-box__footer--info {
+  display: flex;
+  flex-direction: column;
+}
+.feedback-box__footer {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.che-logo {
+  width: 80px;
+  height: 30px;
+  background-color: #9b8577;
+  position: absolute;
+  bottom: 20%;
+  right: 46%;
+}
+.feedback-box__footer--info {
+  margin-right: 60px;
+}
+.sign-up:hover {
+  color: var(--whiteColor);
 }

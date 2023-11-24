@@ -136,10 +136,10 @@
             </section>
             <div class="company-main">
               <section class="main">
-                <div class="company-title">
+                <div class="company-title" data-aos="fade-right">
                   <h4 for="">Các công ty hàng đầu</h4>
                 </div>
-                <div class="company-content"></div>
+                <div class="company-content" data-aos="fade-left"></div>
               </section>
             </div>
           </div>
@@ -177,6 +177,19 @@
             <div class="career-container"></div>
           </div>
         </section>
+      </div>
+      <div class="CV">
+        <section class="main">
+          <div class="CV-content" data-aos="zoom-in">
+            <img
+              src="https://images.vietnamworks.com/logo/4-1392x326_124752.png"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+      <div id="progress" onclick="window.scrollTo(0,0)">
+        <div id="value">0%</div>
       </div>
     </main>
     <div>
@@ -271,7 +284,7 @@
       slidesPerView: 3,
       slidesPerColumn: 3,
       slidesPerGroup: 3,
-      spaceBetween: 30,
+      spaceBetween: 20,
       grid: {
         rows: 3,
         fill: "row",
@@ -292,7 +305,7 @@
           if (vw > 1000) {
             mySwiper.params.slidesPerView = 3;
             mySwiper.params.slidesPerColumn = 3;
-            mySwiper.params.slidesPerGroup = 3;
+            mySwiper.params.slidesPerGroup = 2;
           } else {
             mySwiper.params.slidesPerView = 2;
             mySwiper.params.slidesPerColumn = 1;
@@ -471,75 +484,117 @@
         city: "Hồ Chí Minh",
       },
       {
-        title: "Sales Online Excitive",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
+        img: "https://images.vietnamworks.com/pictureofcompany/a1/11125467.png",
+        title: "Presale Công Nghệ thông tin Công Nghệ thông tin",
+        des: "Công Ty Cổ Phần Công Nghệ MobiFone Toàn Cầu ( MobiFone Global)",
+        earning: "Thương lượng",
         city: "Hà Nội",
       },
       {
-        title: "Trưởng ca kỹ thuật",
-        des: "Aeon Mall Vietnam Co., Ltd",
+        img: "https://images.vietnamworks.com/pictureofcompany/1f/11223889.png",
+        title: "Facility & Security Officer (Aeon Mall Tan Phu - 339)",
+        des: "AEONMALL Vietnam Co., Ltd",
         earning: "$400 - $600",
-        city: "Hà Nội",
+        city: "Thừa Thiên Huế",
       },
       {
-        title: "Gián Đốc An Ninh",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
+        img: "https://images.vietnamworks.com/pictureofcompany/18/11127500.png",
+        title: "Senior Sales Executive (Medical)",
+        des: "Công Ty Cổ Phần Vinbrain",
+        earning: "Thương lượng",
+        city: "Hà Nội, Hồ Chí Minh",
+      },
+      {
+        img: "https://images.vietnamworks.com/pictureofcompany/fb/11129779.png",
+        title:
+          "Junior/ Senior Web Publisher (Frontend Developer) (JavaScript, HTML5, CSS)",
+        des: "NEXON DEV VINA",
+        earning: "Thương lượng",
         city: "Hồ Chí Minh",
       },
       {
-        title: "Tester",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
-        city: "Hồ Chí Minh",
-      },
-      {
-        title: "Business Analyst",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
+        img: "https://images.vietnamworks.com/pictureofcompany/5e/11232235.png",
+        title:
+          "Cán Bộ Phát Triển Chương Trình (Phụ Trách Ngành Công Nghệ Thông Tin)",
+        des: "Chuyên Viên Giải Pháp Viễn Thông và Công Nghệ Thông Tin",
+        earning: "Thương lượng",
         city: "Hà Nội",
       },
       {
+        img: "https://images.vietnamworks.com/pictureofcompany/a1/11125467.png",
         title: "Facility & Security Officer",
         des: "Aeon Mall Vietnam Co., Ltd",
         earning: "$400 - $600",
         city: "Hồ Chí Minh",
       },
       {
-        title: "Lập trình viên Front-end",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
+        img: "https://images.vietnamworks.com/pictureofcompany/39/10808735.png",
+        title: "Senior Investment Analyst",
+        des: "Techcom Securities (Tcbs)",
+        earning: "$1000 - $2000",
         city: "Hà Nội",
       },
       {
-        title: "Lập trình viên Back-End",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
+        img: "https://images.vietnamworks.com/pictureofcompany/d4/11148742.png",
+        title: "Content Marketing Specialist (Cryptocurrency/blockchain)",
+        des: "Athena TechHub",
+        earning: "$1000 - $1500",
+        city: "Hồ Chí Minh",
+      },
+      {
+        img: "https://images.vietnamworks.com/pictureofcompany/d5/10894078.png",
+        title: "Student Services Manager",
+        des: "Công Ty TNHH Giáo Dục Và Đào Tạo Vinuniversity",
+        earning: "Thương lượng",
+        city: "Hồ Chí Minh",
+      },
+      {
+        img: "https://images.vietnamworks.com/pictureofcompany/59/11176232.png",
+        title: "Trưởng Nhóm Kế Toán Thuế (Mảng Xây Dựng, Bất Động Sản)",
+        des: "Eurowindow Holding",
+        earning: "Thương lượng",
         city: "Hà Nội",
       },
       {
-        title: "Quả trị nhân sự",
+        img: "https://images.vietnamworks.com/pictureofcompany/d1/11125570.png",
+        title: "Nhân Viên Quan Hệ Khách Hàng Doanh Nghiệp",
+        des: "Chailease International Leasing Co., Ltd",
+        earning: "Thương lượng",
+        city: "Bình Dương, Cần Thwo, Hồ Chí Minh",
+      },
+      {
+        img: "https://images.vietnamworks.com/pictureofcompany/54/11225215.png",
+        title: "QA Game Tester",
+        des: "Nexon Networks Vina Co. Ltd,",
+        earning: "Thương lượng",
+        city: "Hồ Chí Minh",
+      },
+      {
+        img: "https://images.vietnamworks.com/pictureofcompany/a1/11125467.png",
+        title: "Facility & Security Officer",
         des: "Aeon Mall Vietnam Co., Ltd",
         earning: "$400 - $600",
         city: "Hồ Chí Minh",
       },
       {
-        title: "Nhân viên kinh doanh",
+        img: "https://images.vietnamworks.com/pictureofcompany/a1/11125467.png",
+        title: "Facility & Security Officer",
         des: "Aeon Mall Vietnam Co., Ltd",
         earning: "$400 - $600",
-        city: "Hà Nội",
+        city: "Hồ Chí Minh",
       },
       {
-        title: "Sale Executive",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
-        city: "Hà Nội",
+        img: "https://images.vietnamworks.com/pictureofcompany/d4/11210906.jpg",
+        title: "Operation Support (Analyst) Intern",
+        des: "Seven System Viet Nam JSC (7-Eleven)",
+        earning: "Thương lượng",
+        city: "Hồ Chí Minh",
       },
       {
-        title: "Nhân viên Maketing",
-        des: "Aeon Mall Vietnam Co., Ltd",
-        earning: "$400 - $600",
+        img: "https://images.vietnamworks.com/pictureofcompany/3b/10304843.png",
+        title: "[Remote] Mobile Game Developer",
+        des: "Công Ty TNHH Ateam Việt Nam",
+        earning: "Thượng lượng",
         city: "Hồ Chí Minh",
       },
     ];
@@ -555,7 +610,7 @@
         />
         </div>
         <div class="job-box__content">
-          <span>${item.title}</span>
+          <span title="${item.title}">${item.title}</span>
           <span>${item.des}</span>
           <span>${item.earning}</span>
           <span>${item.city}</span>
@@ -571,5 +626,39 @@
     const onClickCompany = () => {
       window.location.assign("../company/Company.html");
     };
+
+    window.addEventListener("scroll", function () {
+      createProgress();
+    });
+    function createProgress() {
+      const run = false;
+      const progressRef = document.getElementById("progress");
+      const valueRef = document.getElementById("value");
+
+      window.onscroll = () => setRun(!run);
+      window.onload = () => setRun(!run);
+
+      function setRun(value) {
+        run = value;
+        updateProgress();
+      }
+
+      function updateProgress() {
+        const pos = document.documentElement.scrollTop;
+        const calcHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollValue = Math.round((pos * 100) / calcHeight);
+        progressRef.style.background = `conic-gradient(#689af8 ${scrollValue}% , #2b2f38 ${scrollValue}% )`;
+        valueRef.innerText = `${scrollValue}%`;
+      }
+
+      // Initial update
+      updateProgress();
+
+      // Scroll to top when progress bar is clicked
+      progressRef.addEventListener("click", () => window.scrollTo(0, 0));
+    }
+    createProgress();
   </script>
 </html>

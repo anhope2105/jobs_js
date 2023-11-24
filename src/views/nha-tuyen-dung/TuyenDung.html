@@ -48,7 +48,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="#"> Công ty</a></li>
+              <li><a onclick="onClickCompany()"> Công ty</a></li>
               <li><a href="#"> Nghề nghiệp</a></li>
               <li><a href="#"> Liên hệ</a></li>
             </ul>
@@ -105,13 +105,17 @@
                 <div class="banner-signin" data-aos="fade-up">
                   <span style="color: var(--grayColor)"
                     >Đã có tài khoản khách hàng?
-                    <a style="text-decoration: underline" href=""
+                    <a
+                      style="text-decoration: underline"
+                      class="sign-up"
+                      href=""
                       >Đăng Nhập</a
                     ></span
                   >
                 </div>
               </div>
               <div class="banner-content__img" data-aos="fade-left">
+                <div class="che-logo"></div>
                 <img
                   src="https://itviec.com/assets/employer_landing/hire-the-best-it-15-95d4b6df6293a405cd77c094b8c7eb5dcc99cf8711f5b47751c841cfa51023a0.png"
                   alt=""
@@ -338,7 +342,7 @@
                 data-aos="zoom-in-right"
                 data-aos-delay="400"
               >
-                <h4>Các doanh nghiệp hàng đầu lự chọn FobsForStudent</h4>
+                <h4>Các doanh nghiệp hàng đầu lựa chọn FobsForStudent</h4>
               </div>
               <div
                 class="business-content__main"
@@ -420,6 +424,23 @@
               </div>
             </div>
           </section>
+          <div class="feedback">
+            <section class="main">
+              <div class="feedback-content">
+                <div class="feedback-content__title" data-aos="fade-down">
+                  <h4>Khách hàng nói gì về chúng tôi</h4>
+                </div>
+                <div class="feedback-content__box" data-aos="zoom-in">
+                  <div id="swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -509,7 +530,114 @@
     </div>
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    const mySwiper = new Swiper("#swiper", {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 10,
+      speed: 1000,
+      loop: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      // on: {
+      //   init: function () {},
+      //   orientationchange: function () {},
+      //   beforeResize: function () {
+      //     let vw = window.innerWidth;
+      //     if (vw > 1000) {
+      //       mySwiper.params.slidesPerView = 3;
+      //       mySwiper.params.slidesPerColumn = 3;
+      //       mySwiper.params.slidesPerGroup = 3;
+      //     } else {
+      //       mySwiper.params.slidesPerView = 2;
+      //       mySwiper.params.slidesPerColumn = 2;
+      //       mySwiper.params.slidesPerGroup = 2;
+      //     }
+      //   },
+      // },
+    });
+    const listFeedback = [
+      {
+        cmt: "Chúng tôi đã tuyển dụng được nhiều ứng viên đủ tiêu chuẩn thông qua các tin đăng tuyển dụng trên ITviec. ITviec cực kỳ chuyên nghiệp, hữu ích và thân thiện trong việc thu hút nhân tài trong lĩnh vực IT. Thật tuyệt vời khi được làm việc cùng đội ngũ chăm sóc khách hàng của ITviec",
+        author: "Ms. Thanh Tâm",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmZvSXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--88c82102b4c6782414b90e4077f75449b9789560/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/Logo%20MB%20he%20mau%20RGB%2001.png",
+      },
+      {
+        cmt: "JobsForStudent là một trong những cộng đồng IT lớn nhất Việt Nam và là trang web đáng tin cậy cho các công ty IT. Đối với các kênh tuyển dụng nhằm tiếp cận các ứng viên chủ động, thì JobsForStudent là có lượng ứng viên khá chất lượng giúp DEK đạt kết quả tuyển dụng nhanh chóng.",
+        author: "Ms. Thanh Vy",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+      {
+        cmt: "JobsForStudent có nhiều công việc với những tính chất ngành nghề phong phú. Phản ánh chính xác và đầy đủ nhu cầu tìm việc làm trong xã hội hiện nay và nhu cầu tuyển dụng của các doanh nghiệp. Giao diện trình bày dễ hiểu. Bên cạnh đó, JobsForStudent còn có nhiều nội dung, bài viết phong phú, phản ánh thực tế nhu cầu tuyển dụng, công việc trong giai đoạn hiện nay.",
+        author: "Ms. Thùy Linh",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+      {
+        cmt: "JobsForStudent có nhiều công việc với những tính chất ngành nghề phong phú. Phản ánh chính xác và đầy đủ nhu cầu tìm việc làm trong xã hội hiện nay và nhu cầu tuyển dụng của các doanh nghiệp. Giao diện trình bày dễ hiểu. Bên cạnh đó, JobsForStudent còn có nhiều nội dung, bài viết phong phú, phản ánh thực tế nhu cầu tuyển dụng, công việc trong giai đoạn hiện nay.",
+        author: "Ms. Linh Chi",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+      {
+        cmt: "Khi mình nộp hồ sơ trên trang web, sẽ có mail gửi đến để xác nhận mình đã nộp hồ sơ thành công. Điều này giúp mình biết và quản lý được các vị trí và công ty mình đã ứng tuyển. Bên cạnh đó, giao diện rất dễ sử dụng, mình có thể xem việc làm, thông tin công ty và xem lại các công việc đã xem, đã lưu, hoặc đã ứng tuyển một cách rất dễ dàng. Hơn nữa, các công ty đăng ký đăng tuyển đa số là các công ty uy tín, nên mình rất tin tưởng khi tìm việc trên nền tảng JobsForStudent.",
+        author: "Ms. Thanh Tâm",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+      {
+        cmt: "Giao diện website của JobsForStudent rất thân thiện với người dùng, phù hợp cho cả người mới sử dụng lần đầu lẫn người sử dụng lâu năm. Đa dạng thông tin về vị trí làm việc, thông tin giới thiệu về công ty rõ ràng. Những công việc được gợi ý thường dựa trên hành vi của người dùng do đó công việc gợi ý thường rất phù hợp với nhu cầu của người dùng.",
+        author: "Ms. Thanh Tâm",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+      {
+        cmt: "JobsForStudent có đa dạng ngành nghề, các công ty và tổ chức. Hình thức ứng tuyển tiện lợi, người tìm việc có thể xây dựng hồ sơ trực tiếp trên trang JobsForStudent, có thể kết nối với các tài khoản xã hội khác làm tăng tính tương tác và giúp dễ dàng tìm được công việc.",
+        author: "Ms. Thanh Tâm",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+      {
+        cmt: "Mình rất thích giao diện của JobsForStudent, hữu ích và dễ tìm kiếm. Các công ty, ngành nghề đa dạng và có rất nhiều công việc từ những công ty lớn với mức lương cao như mong đợi. Về việc quản lý hồ sơ, tôi được gợi ý bổ sung chỉnh sửa để hồ sơ của mình hoàn thiện hơn. Ứng dụng JobsForStudent khá hiệu quả và tinh tế, có cái nhìn mới tổng quan và được thay đổi theo sự phát triển của thị trường việc làm. Điều này làm cho tôi khá ấn tượng.",
+        author: "Ms. Thanh Tâm",
+        company: "Talent Acquisition Lead | DEK technologies Vietnam",
+        img: "https://itviec.com/rails/active_storage/representa…0a82e5139be9920420fe05da8a838e38c/MoMo%20Logo.png",
+      },
+    ];
+
+    const elWripers = document.getElementsByClassName("swiper-wrapper")[0];
+    elWripers.innerHTML = listFeedback
+      .map(
+        (item) => `
+        <div class="swiper-slide job-box" >
+          <div class="feedback-box__content">
+              <span>${item.cmt}</span>
+            <div class="feedback-box__footer">
+
+              <div class="feedback-box__footer--info">
+                <span>${item.author}</span>
+                <span>${item.company}</span>
+            </div>
+            <div  class="employer-logo bg-white re-logo">
+                <img src="${item.img}}" />
+             </div>
+          </div>
+      </div>
+    </div>
+        `
+      )
+      .join(" ");
     AOS.init({
       duration: 1000,
     });
@@ -517,6 +645,12 @@
       window.location.assign("../layout-main/LayoutMain.html");
     };
 
+    const onClickBlog = () => {
+      window.location.assign("../blog/Blog.html");
+    };
+    const onClickCompany = () => {
+      window.location.assign("../company/Company.html");
+    };
     function animateNumber(
       finalNumber,
       duration = 5000,

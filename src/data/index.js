@@ -1,52 +1,58 @@
-export const data = [
-  {
-    id: "01",
-    title: "Kinh doanh",
-    contents: [
-      "1368 Việc Làm",
-      "Mức lương trung bình:",
-      "4-21 triệu VNĐ/tháng.",
-    ],
-  },
-  {
-    id: "02",
-    title: "Công nghệ thông tin",
-    contents: [
-      "836 Việc Làm",
-      "Mức lương trung bình:",
-      "13.8-50 triệu VNĐ/tháng.",
-    ],
-  },
-  {
-    id: "03",
-    title: "Kế toán / kiểm toán",
-    contents: ["675 Việc Làm", "Mức lương trung bình:", "9-13 triệu VND/tháng"],
-  },
-  {
-    id: "04",
-    title: "Ngân hàng",
-    contents: [
-      "518 việc làm",
-      "Mức lương trung bình:",
-      "12-20 triệu VND/tháng",
-    ],
-  },
-  {
-    id: "05",
-    title: "Kiến trúc/Xây dựng",
-    contents: [
-      "468 Việc Làm",
-      "Mức lương trung bình:",
-      "10-30 triệu VND/tháng",
-    ],
-  },
-  {
-    id: "06",
-    title: "Bất động sản",
-    contents: [
-      "90 việc làm",
-      "Mức lương trung bình:",
-      "3.5 - 30 triệu VND/tháng",
-    ],
-  },
-];
+export const header = () => `
+
+<div class="header">
+  <div class="header-content__main">
+    <div class="header-content__title">
+      <nav class="navigation">
+        <a href="#!" class="logo">Jobs For Student</a>
+      </nav>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a onclick="onClickHomePage()">Trang chủ</a></li>
+        <li>
+          <a href="#">Việc làm</a>
+          <ul class="sub-menu">
+            <li><a href=""> Việc làm mới nhất</a></li>
+            <li><a href=""> Tìm việc làm</a></li>
+            <li><a href=""> Việc làm mới nhất</a></li>
+            <li>
+              <a href="">
+                <span>Việc làm cho IT</span>
+                <div style="position: absolute; right: 20px; top: 0">
+                  <i class="arrow right"></i></div
+              ></a>
+              <ul class="sub-menu__child">
+                <li><a href="">Tester</a></li>
+                <li><a href="">Business Analyst</a></li>
+                <li><a href="">Phần mềm</a></li>
+                <li><a href="">Phần cứng</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a onclick="onClickCompany()"> Công ty</a></li>
+        <li><a href="#"> Nghề nghiệp</a></li>
+        <li><a href="#"> Liên hệ</a></li>
+      </ul>
+    </div>
+    <div class="header-content__right">
+      <div class="flex" style="position: relative">
+        <div style="padding-right: 10px">
+          <a onclick="onClickNhaTuyenDung()">Nhà tuyển dụng</a>
+        </div>
+        <div class="divider-horizontal"></div>
+        <div class="pl-2">
+          <a>Đăng Nhập/Đăng Ký</a>
+        </div>
+
+        <div class="pl-5 pr-[20px]">
+          <a>VN</a>
+          <span>|</span>
+          <a style="color: var(--grayColor)">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
